@@ -1,0 +1,22 @@
+<table class="table table-condensed">
+  <thead>
+    <tr>
+      <th>カテゴリ</th>
+      <th>種類</th>
+      <th>商品名</th>
+      <th>金額</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @details.each do |detail| %>
+      <tr>
+        <td><%= detail.group.blank? ? "" : detail.group.name %></td>
+        <td><%= detail.kind.blank? ? "" : detail.kind.name %></td>
+        <td><%= detail.article.blank? ? "" : detail.article %></td>
+        <td><%= detail.price.blank? ? "" : detail.price %></td>
+      </tr>
+    <% end %>
+  </tbody>
+
+</table>
