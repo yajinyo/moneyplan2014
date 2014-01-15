@@ -1,10 +1,6 @@
 $(function(){
 
-  $("#detail_day").datepicker();
-  $('#detail_day').datepicker("option", "dateFormat", 'yy-mm-dd' );
-
-  $('#detail_day').datepicker().datepicker('setDate','today');
-
+  today_set();
 
 
 
@@ -21,6 +17,16 @@ $(function(){
 
 
 
+
+
+
+
+function today_set() {
+  $("#detail_day").datepicker();
+  $('#detail_day').datepicker("option", "dateFormat", 'yy-mm-dd' );
+
+  $('#detail_day').datepicker().datepicker('setDate','today');
+}
 
 
 
@@ -93,16 +99,9 @@ function selected(object_name, id, name) {
 
 
 
-function input_reset() {
-  
+function details_reset() {
+  $('#new_detail').reset();
 
-
-
-
-
-
-
-
-
+  today_set();
 }
 
