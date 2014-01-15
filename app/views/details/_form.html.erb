@@ -3,6 +3,14 @@
   <fieldset>
     <legend>何買ったの？</legend>
     
+
+    <div class="control-group">
+      <label class="control-label" for="focusedInput">明細日</label>
+      <div class="controls">
+        <%= f.text_field :day %>
+      </div>
+    </div>
+
     <div class="control-group">
       <label class="control-label" for="focusedInput">カテゴリ</label>
       <div class="controls">
@@ -55,7 +63,7 @@
 
 
 
-
-
-<%= render 'groups/create_dialog' %>
-<%= render 'kinds/create_dialog' %>
+<div>
+  <%= render 'groups/create_dialog' %>
+  <%= render 'kinds/create_dialog' %>
+</div>

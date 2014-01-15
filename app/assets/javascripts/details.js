@@ -1,5 +1,14 @@
 $(function(){
 
+  $("#detail_day").datepicker();
+  $('#detail_day').datepicker("option", "dateFormat", 'yy-mm-dd' );
+
+  $('#detail_day').datepicker().datepicker('setDate','today');
+
+
+
+
+
   $('#open_groups').click(function() {
     $('#group_buttons').slideToggle('first');
   });
@@ -75,3 +84,25 @@ function selected(object_name, id, name) {
 
   $('#' + object_name + '_buttons').slideToggle('first');
 }
+
+
+
+
+
+
+
+
+
+function input_reset() {
+  
+
+
+
+
+
+
+
+
+
+}
+
