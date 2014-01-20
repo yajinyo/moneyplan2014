@@ -100,8 +100,9 @@ function selected(object_name, id, name) {
 
 
 function details_reset() {
-  $('#new_detail').reset();
-
+  $('#new_detail')[0].reset();
+  $('#selected_group_name').html("");
+  $('#selected_kind_name').html("");
   today_set();
 }
 
