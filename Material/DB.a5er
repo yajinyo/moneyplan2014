@@ -58,7 +58,7 @@ TermPos1=R
 TermPos2=R
 
 [Comment]
-Comment=毎月レコード作成時に\n締日テーブルの値と\n支払定型テーブルの値を持ってくる\n（外部参照しない）
+Comment=毎月レコード作成時に\n全てをコピーする\n（外部参照しない）
 FontName=Tahoma
 FontBold=0
 FontItalic=0
@@ -68,10 +68,10 @@ FontColor=$000000
 LineColor=$000000
 BkColor=$FFFFFF
 Page=Main
-Left=250
-Top=450
-Width=664
-Height=217
+Left=1850
+Top=1700
+Width=492
+Height=180
 
 [Entity]
 PName=accounts
@@ -99,8 +99,8 @@ LName=支払定型
 Comment=
 TableOption=
 Page=MAIN
-Left=1000
-Top=900
+Left=1300
+Top=950
 Field="id","id","integer","NOT NULL",0,"","",$FFFFFFFF,""
 Field="引落口座","account_id","integer",,,"","引落ひな形からコピー",$FFFFFFFF,""
 Field="引落日","withdrawal_day","date",,,"","引落ひな形からコピー",$FFFFFFFF,""
@@ -110,7 +110,7 @@ EffectMode=None
 Color=$000000
 BkColor=$FFFFFF
 ModifiedDateTime=20140217123842
-Position="MAIN",1000,900
+Position="MAIN",1300,950
 
 [Entity]
 PName=closing_dates
@@ -169,8 +169,8 @@ LName=支払明細
 Comment=
 TableOption=
 Page=MAIN
-Left=900
-Top=1400
+Left=850
+Top=1550
 Field="id","id","integer","NOT NULL",0,"","",$FFFFFFFF,""
 Field="毎月_id","month_id","integer","NOT NULL",,"","",$FFFFFFFF,""
 Field="引落口座_id","account_id","integer","NOT NULL",,"","",$FFFFFFFF,""
@@ -182,4 +182,4 @@ EffectMode=None
 Color=$000000
 BkColor=$FFFFFF
 ModifiedDateTime=20140217124938
-Position="MAIN",900,1400
+Position="MAIN",850,1550
