@@ -95,7 +95,7 @@ TermPos1=R
 TermPos2=R
 
 [Relation]
-Entity1=NEW_ENTITY1
+Entity1=fixed_form
 Entity2=accounts
 RelationType1=4
 RelationType2=2
@@ -129,7 +129,7 @@ Page=Main
 Left=1250
 Top=1200
 Width=492
-Height=180
+Height=235
 
 [Entity]
 PName=accounts
@@ -152,7 +152,7 @@ ModifiedDateTime=20140305124725
 Position="MAIN",2050,650
 
 [Entity]
-PName=NEW_ENTITY1
+PName=fixed_form
 LName=支払定型
 Comment=
 TableOption=
@@ -160,14 +160,13 @@ Page=MAIN
 Left=1400
 Top=950
 Field="id","id","serial","NOT NULL",0,"","",$FFFFFFFF,""
-Field="口座","account_id","serial",,,"","",$FFFFFFFF,""
+Field="口座","account_id","integer",,,"","",$FFFFFFFF,""
 Field="引落日","withdrawal_day","integer",,,"","日にちを設定（例：26）",$FFFFFFFF,""
-Field="名称","name","integer","NOT NULL",,"","",$FFFFFFFF,""
-Field="表示順","display_order","integer","NOT NULL",,"0","",$FFFFFFFF,""
+Field="名称","name","varchar(20)","NOT NULL",,"","",$FFFFFFFF,""
 EffectMode=None
 Color=$000000
 BkColor=$FFFFFF
-ModifiedDateTime=20140305130729
+ModifiedDateTime=20140311125429
 Position="MAIN",1400,950
 
 [Entity]
@@ -226,17 +225,16 @@ LName=支払明細
 Comment=
 TableOption=
 Page=MAIN
-Left=1200
+Left=1204
 Top=1500
 Field="id","id","serial","NOT NULL",0,"","",$FFFFFFFF,""
-Field="毎月_id","month_id","serial","NOT NULL",,"","",$FFFFFFFF,""
+Field="毎月_id","month_id","integer","NOT NULL",,"","",$FFFFFFFF,""
 Field="口座_id","account_id","integer","NOT NULL",,"","",$FFFFFFFF,""
 Field="引落日","day","date","NOT NULL",,"","",$FFFFFFFF,""
-Field="支払名称","name","string",,,"","",$FFFFFFFF,""
-Field="金額","price","integer",,,"","",$FFFFFFFF,""
-Field="表示順","display_order","integer",,,"","",$FFFFFFFF,""
+Field="支払名称","name","varchar(20)",,,"","",$FFFFFFFF,""
+Field="金額","price","integer",,,"0","",$FFFFFFFF,""
 EffectMode=None
 Color=$000000
 BkColor=$FFFFFF
-ModifiedDateTime=20140305130757
-Position="MAIN",1200,1500
+ModifiedDateTime=20140311125715
+Position="MAIN",1204,1500

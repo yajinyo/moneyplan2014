@@ -2,12 +2,11 @@
 class CreatePayments < ActiveRecord::Migration
   def change
     create_table :payments do |t|
-      t.integer :monthly_id
-      t.integer :withdrawal_day
-      t.string  :name,          :null => false
+      t.integer :month_id,      :null => false
+      t.integer :account_id,    :null => false
+      t.date    :day,           :null => false
+      t.string  :name,          :null => false,   :limit => 20
       t.integer :price,         :default => 0
-      t.integer :account_id
-      t.integer :display_order
 
       t.timestamps
     end
