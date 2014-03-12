@@ -2,8 +2,6 @@ Moneyplan2013::Application.routes.draw do
   resources :details
 
 
-  resources :articles
-
 
   resources :kinds do
     collection do
